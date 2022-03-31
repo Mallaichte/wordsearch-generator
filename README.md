@@ -1,4 +1,4 @@
-# worsearch-generator
+# wordsearch-generator
 Python script for generating wordsearch puzzles
 
 A simple wordsearch generator created as a home learning lockdown project with my son.
