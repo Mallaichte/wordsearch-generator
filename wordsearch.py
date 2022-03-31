@@ -205,6 +205,4 @@ if input ("Show solution [y/n]: ").lower() == "y":
 		count += row_col_size*2
 	print("+-"*row_col_size+"+")
 
-#if input ("Again?: ").lower == "y":
-                #goto .start
 input ("All done. ")
