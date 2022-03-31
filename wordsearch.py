@@ -5,13 +5,14 @@ import sys
 import os
 # Get search words (or display help)
 wordlist = []
-if sys.argv[1] == "-h" or sys.argv[1] == "--help":
-	print("Run without arguments for interface or \"-sw [search-words-seperated-by-hyphen-here]\" to give your search words in the command line.")
-	os._exit(os.EX_OK)
-elif sys.argv[1] == "-sw":
-	searchwords = sys.argv[2]
-	searchwords = searchwords.upper()
-	wordlist = searchwords.split("-")
+if len(sys.argv) > 1:
+	if sys.argv[1] == "-h" or sys.argv[1] == "--help":
+		print("Run without arguments for interface or \"-sw [search-words-seperated-by-hyphen-here]\" to give your search words in the command line.")
+		os._exit(os.EX_OK)
+	elif sys.argv[1] == "-sw":
+		searchwords = sys.argv[2]
+		searchwords = searchwords.upper()
+		wordlist = searchwords.split("-")
 else:
 	searchwords = input ("Enter the words to search separated by a space: ")  + "  "
 	searchwords = searchwords.upper().rstrip(" ")
